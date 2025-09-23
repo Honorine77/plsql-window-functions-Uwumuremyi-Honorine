@@ -6,5 +6,5 @@ Data challenge: The management team wants to know the top-performing pastry type
 Expected outcome: providing a clear report of the top-performing pastry and insights on the targeted customer's preference, which is meant to help the business in making strategic and informed decisions.
 
 ## STEP 2: SUCCESS CRITERIA
-1. Identify the top 5 products
-2.
+1. Identify the top 5 pastry using ranking functions
+2.r
