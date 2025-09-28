@@ -67,18 +67,20 @@ FROM monthly
 ORDER BY region, month_start;
 
 --- DISTRIBUTION
-WITH cust_totals AS (
-  SELECT customer_id, SUM(amount) AS total_revenue
-  FROM transactions
-  GROUP BY customer_id
-)
-SELECT
-  customer_id,
-  total_revenue,
-  NTILE(4) OVER (ORDER BY total_revenue DESC) AS quartile,  -- 1 = top 25%
-  CUME_DIST() OVER (ORDER BY total_revenue DESC) AS cume_dist
-FROM cust_totals
-ORDER BY total_revenue DESC;
+SELECT 
+    c.name,
+    SUM(t.amount) as total_spent,
+    NTILE(4) OVER (ORDER BY SUM(t.amount) DESC) as customer_quartile,
+    CASE 
+        WHEN NTILE(4) OVER (ORDER BY SUM(t.amount) DESC) = 1 THEN 'VIP Customer'
+        WHEN NTILE(4) OVER (ORDER BY SUM(t.amount) DESC) = 2 THEN 'High Value'
+        WHEN NTILE(4) OVER (ORDER BY SUM(t.amount) DESC) = 3 THEN 'Medium Value'
+        ELSE 'New Customer'
+    END as customer_segment
+FROM customers c
+JOIN transactions t ON c.customer_id = t.customer_id
+GROUP BY c.customer_id, c.name
+ORDER BY total_spent DESC;
 
 
 
