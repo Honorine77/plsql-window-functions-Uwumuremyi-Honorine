@@ -1,5 +1,5 @@
 ## STEP 1: PROBLEM DEFINITION 
-Business context: A pastry shop with five branches across Rwanda serves red velvet, chocolate, cheesecake, and mousse pastries.
+Business context: Savory pastry shop with five branches across Rwanda serves red velvet, chocolate, cheesecake, and mousse pastries.
 
 Data challenge: The management team wants to know the top-performing pastry type per branch, examine the sales trends, and customers' spending behavior to know the most preferred pastry in order to optimize the business's inventory and come up with appropriate marketing strategies.
 
@@ -16,4 +16,21 @@ Expected outcome: providing a clear report of the top-performing pastry and insi
 ![TOP PERFORMING PASTRY](screenshots/RANK.png)
 ![CUMULATIVE MONTHLY SALES](screenshots/AGGREGATE.png)
 ![PERIOD-TO-PERIOD SLAES COMPARISON](screenshots/MONTH-OVER-MONTH.png)
-![CUSTOMERS' SEGMNENTATION](screenshots/CUSTOMER SEGMENTS.png)
+![CUSTOMERS' SEGMNENTATION](screenshots/CUSTOMER-SEGMENTS.png)
+![THE ER DIAGRAM OF SCHEMA](screenshots/ERD.png)
+
+## STEP 6: RESULT ANALYSIS
+1. DESCRIPTIVE
+   The analysis has shown that Nyamagabe is the region which gave a high amount of revenue, with red velvet cake being the best performing pastry with 60000 rwf
+2. DIAGNOSTIC
+   Red velvet cakes high demand was likely due to the high number of youth in the area, which was boosted by the presence of many schools in the area making the product more    purchased than the rest
+3.Prescriptive
+  After looking at these results, I would recommend Savory pastry shop to increase the production of red velvet cakes and other similar products to attract more customers.    
+## REFERENCES
+YOUTUBE TUTORIAL SQL Window Functions | Clearly Explained | PARTITION BY, ORDER BY, ROW_NUMBER, RANK, DENSE_RANK: https://www.youtube.com/watch?v=rIcB4zMYMas
+SQL Window Functions Explained (with examples): https://www.youtube.com/watch?v=xFeOVIIRyvQ
+claude.ai
+LECTURE NOTES
+
+## INTEGRITY STATEMENT
+All sources were properly cited. Implementations and analysis represent original work. No AI generated content was copied without attribution or adaptation.
