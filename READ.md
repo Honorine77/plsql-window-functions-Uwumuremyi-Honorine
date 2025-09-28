@@ -24,7 +24,8 @@ Expected outcome: providing a clear report of the top-performing pastry and insi
    The analysis has shown that Nyamagabe is the region which gave a high amount of revenue, with red velvet cake being the best performing pastry with 60000 rwf
 2. DIAGNOSTIC
    Red velvet cakes high demand was likely due to the high number of youth in the area, which was boosted by the presence of many schools in the area making the product more    purchased than the rest
-3.Prescriptive
+
+3.PRESCRIPTIVE
   After looking at these results, I would recommend Savory pastry shop to increase the production of red velvet cakes and other similar products to attract more customers.    
 ## REFERENCES
 YOUTUBE TUTORIAL SQL Window Functions | Clearly Explained | PARTITION BY, ORDER BY, ROW_NUMBER, RANK, DENSE_RANK: https://www.youtube.com/watch?v=rIcB4zMYMas
