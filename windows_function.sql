@@ -18,11 +18,11 @@ ORDER BY total_revenue DESC;
 WITH monthly AS (
   SELECT
     c.region,
-    TRUNC(t.sale_date,'MM') AS month_start,
+    DATE_FORMAT(t.sale_date,'%Y-%m-01') AS month_start,
     SUM(t.amount) AS month_total
   FROM transactions t
   JOIN customers c ON t.customer_id = c.customer_id
-  GROUP BY c.region, TRUNC(t.sale_date,'MM')
+  GROUP BY c.region, DATE_FORMAT(t.sale_date,'%Y-%m-01')
 )
 SELECT
   region,
@@ -40,6 +40,7 @@ SELECT
   ) AS running_total_range
 FROM monthly
 ORDER BY region, month_start;
+
 --- MONTH OVER MONTH
 WITH monthly AS (
   SELECT
@@ -55,7 +56,6 @@ SELECT
   month_start,
   month_total,
   LAG(month_total) OVER (PARTITION BY region ORDER BY month_start) AS prev_month_total,
-  -- calculate % change safely (avoid divide by zero)
   CASE
     WHEN LAG(month_total) OVER (PARTITION BY region ORDER BY month_start) IS NULL THEN NULL
     WHEN LAG(month_total) OVER (PARTITION BY region ORDER BY month_start) = 0 THEN NULL
@@ -65,6 +65,7 @@ SELECT
   END AS pct_change_mom
 FROM monthly
 ORDER BY region, month_start;
+
 --- DISTRIBUTION
 WITH cust_totals AS (
   SELECT customer_id, SUM(amount) AS total_revenue
