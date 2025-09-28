@@ -12,4 +12,8 @@ Expected outcome: providing a clear report of the top-performing pastry and insi
 4. Segmenting customers into groups based on their total spendings using: NTILE()
 5. compute the moving average of 3 month period to clearly see sales trends dynamics using: AVG() OVER()
 
-## STEP 6:
+## SCREENSHOT DESCRIPTION 
+![TOP PERFORMING PASTRY](screenshots/RANK.png)
+![CUMULATIVE MONTHLY SALES](screenshots/AGGREGATE.png)
+![PERIOD-TO-PERIOD SLAES COMPARISON](screenshots/MONTH-OVER-MONTH.png)
+![CUSTOMERS' SEGMNENTATION](screenshots/CUSTOMER SEGMENTS.png)
